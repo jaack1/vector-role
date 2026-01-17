@@ -10,10 +10,11 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 
 Role Variables
 --------------
-```yaml
-vector_version: "0.44.0"
-vector_config_path: "/etc/vector/vector.yaml"
-```
+
+| Variable        | Type   |          Default            |    Description    |
+|-----------------|--------|-----------------------------|-------------------|
+|  vector_version | string |           0.44.0            | version of Vector |
+
 
 Dependencies
 ------------
@@ -25,9 +26,13 @@ Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
+```yaml
+
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - vector-role
+         
+```
 
 License
 -------
