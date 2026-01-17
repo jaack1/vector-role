@@ -1,0 +1,30 @@
+galaxy_info:
+  author: HandsomeJack
+  description: role for the install logs collector Vector
+
+  license: MIT
+
+  min_ansible_version: 2.1
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+        - bionic
+        - xenial
+    - name: Debian
+      versions:
+        - bullseye
+        - buster
+        - stretch
+        - jessie
+    - name: EL
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - vector
+    - logs
+
+dependencies: []

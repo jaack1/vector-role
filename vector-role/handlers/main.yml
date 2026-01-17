@@ -1,0 +1,7 @@
+---
+
+  - name: Flush handlers
+    ansible.builtin.meta: flush_handlers
+    tags:
+      - vector
+      - restart service
