@@ -18,10 +18,6 @@ galaxy_info:
         - buster
         - stretch
         - jessie
-    - name: EL
-      versions:
-        - 7
-        - 8
 
   galaxy_tags:
     - vector
