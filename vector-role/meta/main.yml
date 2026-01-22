@@ -1,4 +1,6 @@
 galaxy_info:
+  role_name: vector_role
+  namespace: netology_test
   author: HandsomeJack
   description: role for the install logs collector Vector
 

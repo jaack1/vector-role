@@ -1,0 +1,31 @@
+---
+
+ansible:
+  cfg:
+    defaults:
+      deprecation_warnings: false
+  executor:
+    args:
+      ansible_playbook:
+        - --inventory=inventory/
+
+dependency:
+  name: galaxy
+  options:
+    requirements-file: ${MOLECULE_SCENARIO_DIRECTORY}/requirements.yml
+platforms:
+  - name: molecule-oracle
+    image: oraclelinux:8
+  - name: molecule-ubuntu
+    image: ubuntu:latest
+
+scenario:
+  test_sequence:
+    - dependency
+    - destroy
+    - create
+    - converge
+    - idempotence
+    - verify
+    - cleanup
+    - destroy
