@@ -2,7 +2,7 @@
 dependency:
   name: galaxy
 driver:
-  name: podman
+  name: docker
 platforms:
   - name: oraclelinux
     image: oraclelinux:8
@@ -14,5 +14,8 @@ platforms:
     command: "apt update && apt install -y python3.9"
 provisioner:
   name: ansible
+  config_options:
+    defaults:
+      remote_tmp: /var/tmp/.ansible_tmp
 verifier:
   name: ansible
