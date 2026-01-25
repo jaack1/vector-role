@@ -8,10 +8,10 @@ platforms:
     image: oraclelinux:8
     pre_build_image: true
     command: "dnf install python3"
-  - name: ubuntu
-    image: ubuntu:latest
-    pre_build_image: true
-    command: "apt update && apt install -y python3.9"
+  - name: ubuntu-python
+    image: ubuntu-python:latest
+    dockerfile: Dockerfile
+    pre_build_image: false
 provisioner:
   name: ansible
 verifier:
